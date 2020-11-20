@@ -1,0 +1,508 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0px 725px auto auto auto auto;
+    text-align: center;
+    grid-template-areas: 
+    ". . . menubtn"
+    "header header header header"
+    "mywork mywork mywork mywork"
+    "aboutme aboutme aboutme aboutme"
+    ". contactme contactme ."
+    "footer footer footer footer";
+}
+
+#menubtn{
+    grid-area: menubtn;
+    width: 100%;
+    font-size: 1em;
+    position: fixed;
+    color: white;
+    text-shadow: 2px 2px 2px #000000;
+    font-size:25px;
+    cursor:pointer;
+    text-align: right;
+    padding: 20px;
+    transition: 0.1s;
+}
+
+#menubtn:hover{
+    color: hsl(300, 100%, 35%);
+    transition: 0.3s;
+    font-size: 2em;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.4s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 0.5em;
+    text-decoration: none;
+    font-size: 32pt;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: purple;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+#header{
+    background-image: url("assets/img/cover.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 0.1fr 0.5fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    text-align: left;
+    grid-gap: 1em;
+}
+
+#header .title{
+    grid-column: 1/5;
+    grid-row: 3/4;
+    color: white;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.4),  rgba(255, 255, 255, 0.2));
+    padding-left: 5%;
+    text-shadow: 0 0 1px black;
+}
+
+#header .title h1{
+    font-weight: 400;
+    text-shadow: 2px 2px #000000;
+    letter-spacing: 3px;
+    font-size: 4.5em;
+}
+
+#header .title h2{
+    font-weight: 300;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    font-size: 32pt;
+    font-style: italic;
+    color: #940194;
+}
+
+#header img{
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    width: 280px;
+    background-color: rgba(255, 255, 255, 0.3);
+    grid-area: mypic;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#mywork{
+    background-color: hsl(0, 0%, 90%);
+    grid-area: mywork;
+}
+
+#mywork h1{
+    text-align: center;
+    font-size: 3em;
+    padding-top: 2em;
+    font-weight: 400;
+    text-shadow: 0 0 1px black;
+    color: purple;
+}
+
+#mywork .row h2{
+    font-weight: 500;
+    font-size: 2.2em;
+    color: #800080;
+    padding: 0 0.5em 1.5em 0.5em;
+    text-align: center;
+    word-spacing: 10px;
+    border-bottom: 1px solid purple;
+}
+
+#mywork .row p{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: gray;
+    word-spacing: 4px;
+    padding: 2em 0.5em 0.5em 0.5em;
+    line-height: 1.3em;
+}
+
+#mywork .row{
+    margin: 5% auto;
+    width: 90%;
+    height: auto;
+}
+
+#mywork .vid{
+    display: inline-block;
+    width: 42%;
+    height: 20em;
+    margin: 0 2.5%;
+}
+
+#mywork .art{
+    display: inline-block;
+    width: 42%;
+    margin: 0 2.5%;
+}
+
+#aboutme{
+    background-color: hsl(0, 0%, 90%);
+    grid-area: aboutme;
+}
+
+#aboutme h1{
+    text-align: center;
+    font-size: 3em;
+    padding: 1em 0 1.5em 0;
+    font-weight: 400;
+    text-shadow: 0 0 1px black;
+    color: purple;
+}
+
+#aboutme h3{
+    padding: 1em 0 1.5em 0;
+    margin: auto 25%;
+    letter-spacing: 2px;
+    color: gray;
+    text-shadow: 0 0 1px gray;
+}
+
+#aboutme .row{
+    margin-bottom: 7%;
+    width: 80%;
+}
+
+#aboutme div{
+    display: inline-block;
+    margin: 2em 2em;
+    width: 230px;
+}
+
+#aboutme h2{
+    color: gray;
+    font-weight: 500;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid purple;
+}
+
+#aboutme p{
+    color: hsl(0, 0%, 20%);
+    font-weight: 300;
+    padding-top: 0.5em;
+    line-height: 1.5em;
+    word-spacing: 3px;
+    text-justify: auto;
+}
+
+#contactme{
+    grid-area: contactme;
+    margin-bottom: 30px;
+}
+
+#contactme h1{
+    text-align: center;
+    font-size: 3em;
+    padding: 1em 0 1.5em 0;
+    font-weight: 400;
+    text-shadow: 0 0 1px black;
+    color: purple;
+}
+
+#contactme p{
+    text-align: center;
+    padding-bottom: 5px;
+    letter-spacing: 2px;
+    font-size: 14pt;
+    text-shadow: 0 0 1px black;
+    color: gray;
+}
+
+#footer{
+    background-color: hsl(0, 0%, 85%);
+    color: gray;
+    padding: 1em;
+    grid-area: footer;
+}
+
+#footer p{
+    padding: 0 1em 0 0;
+    font-size: 11pt;
+}
+
+#footer .row{
+    text-align: center;
+}
+
+#footer .row i{
+    display: inline-block;
+    font-size: 2.5em;
+    margin: 0 0.5em 0.5em 0.5em;
+}
+
+.hvr-bounce-in {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+    -webkit-transform: scale(1.7);
+    transform: scale(1.7);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    color: purple;
+}
+
+@media screen and (max-width: 1024px) {
+    #mywork .row h2{
+        font-weight: 500;
+        font-size: 2em;
+        color: #800080;
+        padding: 0 0.5em 1.5em 0.5em;
+        text-align: center;
+        word-spacing: 10px;
+        border-bottom: 1px solid purple;
+    }
+    
+    #mywork .row p{
+        font-size: 1em;
+        font-weight: 500;
+        color: gray;
+        word-spacing: 4px;
+        padding: 2em 0.5em 0.5em 0.5em;
+        line-height: 1.3em;
+    }
+
+    #mywork .vid{
+        display: inline-block;
+        width: 42%;
+        height: 15em; 
+        margin: 0 2.5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #mywork .row h2{
+        font-weight: 500;
+        font-size: 1.5em;
+        color: #800080;
+        padding: 0 0.5em 1.5em 0.5em;
+        text-align: center;
+        word-spacing: 10px;
+        border-bottom: 1px solid purple;
+    }
+    
+    #mywork .row p{
+        font-size: 0.75em;
+        font-weight: 500;
+        color: gray;
+        word-spacing: 4px;
+        padding: 2em 0.5em 0.5em 0.5em;
+        line-height: 1.3em;
+    }
+
+    #mywork .vid{
+        display: inline-block;
+        width: 42%;
+        height: 11em;
+        margin: 0 2.5%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #mywork .row h2{
+        font-weight: 500;
+        font-size: 1em;
+        color: #800080;
+        padding: 1em 0.5em 0.5em 0.5em;
+        text-align: center;
+        word-spacing: 10px;
+        border-bottom: 1px solid purple;
+    }
+    
+    #mywork .row p{
+        font-size: 0.75em;
+        font-weight: 500;
+        color: gray;
+        word-spacing: 4px;
+        padding: 0.5em 0.5em 1em 0.5em;
+        line-height: 1.3em;
+    }
+
+    #mywork .vid{
+        display: block;
+        width: 80%;
+        height: 8em;
+        margin: 0 auto;
+    }
+
+    #menubtn{
+        grid-area: menubtn;
+        width: 100%;
+        font-size: 0.5em;
+        position: fixed;
+        color: white;
+        text-shadow: 0 0 2px hsl(0, 0%, 40%);
+        font-size:30px;
+        cursor:pointer;
+        text-align: right;
+        padding: 20px;
+        transition: 0.1s;
+    }
+
+    #header img{
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 10px;
+        padding: 10px;
+        width: 150px;
+        background-color: rgba(255, 255, 255, 0.3);
+        grid-area: mypic;
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    #header .title h1{
+        font-weight: 400;
+        letter-spacing: 3px;
+        font-size: 3em;
+        padding-top: 0.25em;
+    }
+    
+    #header hr{
+        display: block;
+        width: 80%;
+        height: 1px;
+        border: 0;
+        border-top: 3px solid rgba(128, 0, 128, 0.8);
+        margin: 0.5em 0;
+        padding: 0; 
+    }
+    
+    #header .title h2{
+        font-weight: 300;
+        letter-spacing: 2px;
+        word-spacing: 3px;
+        font-size: 2em;
+        font-style: italic;
+    }
+
+    body{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0px 350px auto auto auto;
+        text-align: center;
+        grid-template-areas: 
+        ". . . menubtn"
+        "header header header header"
+        "mywork mywork mywork mywork"
+        "aboutme aboutme aboutme aboutme"
+        "contactme contactme contactme contactme"
+        "footer footer footer footer";
+    }
+
+    #mywork h1{
+        text-align: center;
+        font-size: 2em;
+        padding: 1em 0;
+        font-weight: 400;
+        text-shadow: 0 0 1px black;
+        color: purple;
+    }
+
+    #aboutme h1{
+        text-align: center;
+        font-size: 2em;
+        padding: 1em 0 0.5em 0;
+        font-weight: 400;
+        text-shadow: 0 0 1px black;
+        color: purple;
+    }
+
+    #mywork .art{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        font-size: 90%;
+    }
+    
+    #mywork .row{
+        margin: 1em auto;
+        width: 90%;
+        height: auto;
+    }
+
+    #aboutme div{
+        display: block;
+        margin: 1em auto;
+        width: 95%;
+    }
+
+    #aboutme h3{
+        margin: 1em auto;
+        width: 95%;
+    }
+
+    #contactme{
+        text-align: left;
+    }
+
+    .overlay a {
+        padding: 0.2em;
+        text-decoration: none;
+        font-size: 30pt;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    #footer .row i{
+        display: inline-block;
+        font-size: 2.5em;
+        margin: 0 3% 0.5em 3%;
+    }
+    
+    #footer p{
+        padding: 0 1em 1.5em 0;
+        font-size: 11pt;
+    }
+}
