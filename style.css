@@ -115,7 +115,7 @@ body{
     word-spacing: 3px;
     font-size: 32pt;
     font-style: italic;
-    color: #940194;
+    color: hsl(300, 99%, 42%);
 }
 
 #header img{
