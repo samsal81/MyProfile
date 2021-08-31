@@ -13,6 +13,9 @@ body{
     grid-template-areas: 
     ". . . menubtn"
     "header header header header"
+    "intro intro intro intro"
+    "Highlights Highlights Highlights Highlights"
+    "workhis workhis workhis workhis"
     "mywork mywork mywork mywork"
     "aboutme aboutme aboutme aboutme"
     ". contactme contactme ."
@@ -129,12 +132,35 @@ body{
     grid-row: 2/3;
 }
 
+#intro{
+    background-color: hsl(0, 0%, 90%);
+    grid-area: intro;
+}
+
+#Highlights{
+    background-color: hsl(0, 0%, 90%);
+    grid-area: Highlights;
+}
+
 #mywork{
     background-color: hsl(0, 0%, 90%);
     grid-area: mywork;
 }
 
-#mywork h1{
+#workhis{
+    background-color: hsl(0, 0%, 90%);
+    grid-area: workhis;
+}
+
+li{
+    margin-top: 1em;
+}
+
+#jobs{
+    text-align: left;
+}
+
+.secTitle{
     text-align: center;
     font-size: 3em;
     padding-top: 2em;
@@ -186,16 +212,7 @@ body{
     grid-area: aboutme;
 }
 
-#aboutme h1{
-    text-align: center;
-    font-size: 3em;
-    padding: 1em 0 1.5em 0;
-    font-weight: 400;
-    text-shadow: 0 0 1px black;
-    color: purple;
-}
-
-#aboutme h3{
+.largeText{
     padding: 1em 0 1.5em 0;
     margin: auto 25%;
     letter-spacing: 2px;
@@ -234,15 +251,6 @@ body{
 #contactme{
     grid-area: contactme;
     margin-bottom: 30px;
-}
-
-#contactme h1{
-    text-align: center;
-    font-size: 3em;
-    padding: 1em 0 1.5em 0;
-    font-weight: 400;
-    text-shadow: 0 0 1px black;
-    color: purple;
 }
 
 #contactme p{
@@ -460,24 +468,6 @@ body{
         "aboutme aboutme aboutme aboutme"
         "contactme contactme contactme contactme"
         "footer footer footer footer";
-    }
-    
-    #mywork h1{
-        text-align: center;
-        font-size: 2em;
-        padding: 1em 0;
-        font-weight: 400;
-        text-shadow: 0 0 1px black;
-        color: purple;
-    }
-    
-    #aboutme h1{
-        text-align: center;
-        font-size: 2em;
-        padding: 1em 0 0.5em 0;
-        font-weight: 400;
-        text-shadow: 0 0 1px black;
-        color: purple;
     }
     
     #mywork .art{
