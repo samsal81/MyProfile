@@ -79,9 +79,10 @@ body{
 
 .overlay .closebtn {
     position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
+    top: 1em;
+    right: 0.7em;
+    font-size: 6em;
+    margin-top: -1.3em;
 }
 
 #header{
@@ -156,6 +157,18 @@ body{
 #AutoProj{
     background-color: hsl(0, 0%, 90%);
     grid-area: AutoProj;
+}
+
+#AutoProj a{
+    text-decoration: none;
+}
+
+#tab{
+    background-color: #800080;
+    width: 50%;
+    margin: 2em auto;
+    padding: 1em;
+    color: hsl(0, 0%, 90%);/
 }
 
 li{
