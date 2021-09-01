@@ -154,6 +154,10 @@ body{
     grid-area: workhis;
 }
 
+.workloc{
+    color: #800080;
+}
+
 #AutoProj{
     background-color: hsl(0, 0%, 90%);
     grid-area: AutoProj;
