@@ -24,16 +24,15 @@ body{
 }
 
 #menubtn{
-    top: 1em;
-    right: 1em;
+    top: 0em;
+    right: 0em;
     grid-area: menubtn;
     font-size: 1em;
     position: fixed;
     color: purple;
     font-size:25px;
     cursor: pointer;
-    text-align: right;
-    padding: 20px;
+    padding: 1.5em;
     transition: 0.1s;
     font-weight: bold;
 }
@@ -58,9 +57,9 @@ body{
 
 .overlay-content {
     position: relative;
-    top: 6em;
     text-align: center;
     display: inline-block;
+    margin-top: 10%;
 }
 
 .overlay a {
@@ -80,12 +79,8 @@ body{
 .overlay .closebtn {
     position: relative;
     font-size: 6em;
-    right: 1em;
-    text-align: right;
-}
-
-#clsbtndiv{
     float: right;
+    margin-right: 0.7em;
 }
 
 #header{
@@ -244,7 +239,7 @@ li{
 
 .largeText{
     padding: 1em 0 1.5em 0;
-    margin: auto 25%;
+    margin: auto 10%;
     letter-spacing: 2px;
     color: gray;
     text-shadow: 0 0 1px gray;
@@ -410,6 +405,69 @@ li{
 }
 
 @media screen and (max-width: 500px) {
+    
+    body{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 0px 350px auto auto auto auto auto auto auto auto;
+        text-align: center;
+        grid-template-areas:
+        ". . . menubtn"
+        "header header header header"
+        "intro intro intro intro"
+        "Highlights Highlights Highlights Highlights"
+        "workhis workhis workhis workhis"
+        "AutoProj AutoProj AutoProj AutoProj"
+        "WDSkills WDSkills WDSkills WDSkills"
+        "mywork mywork mywork mywork"
+        "contactme contactme contactme contactme"
+        "footer footer footer footer";
+    }
+
+    #menubtn{
+        grid-area: menubtn;
+        position: fixed;
+        font-size: 1.5em;
+        cursor: pointer;
+        transition: 0.1s;
+        top: 0em;
+        right: 0em;
+    }
+    
+    #header img{
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 10px;
+        padding: 10px;
+        width: 150px;
+        background-color: rgba(255, 255, 255, 0.3);
+        grid-area: mypic;
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    
+    #header .title h1{
+        font-weight: 400;
+        letter-spacing: 3px;
+        font-size: 9vw;
+        padding-top: 0.25em;
+    }
+    
+    #header .title h2{
+        font-weight: 300;
+        letter-spacing: 2px;
+        word-spacing: 3px;
+        font-size: 6vw;
+        font-style: italic;
+    }
+
+    #intro h3{
+        font-size: 1em;
+    }
+
+    #Highlights h3{
+        font-size: 1em;
+    }
+
     #mywork .row h2{
         font-weight: 500;
         font-size: 1em;
@@ -434,74 +492,6 @@ li{
         width: 80%;
         height: 8em;
         margin: 0 auto;
-    }
-    
-    #menubtn{
-        grid-area: menubtn;
-        width: 100%;
-        font-size: 0.5em;
-        position: fixed;
-        color: white;
-        text-shadow: 0 0 2px hsl(0, 0%, 40%);
-        font-size:30px;
-        cursor:pointer;
-        text-align: right;
-        padding: 20px;
-        transition: 0.1s;
-    }
-    
-    #header img{
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 10px;
-        padding: 10px;
-        width: 150px;
-        background-color: rgba(255, 255, 255, 0.3);
-        grid-area: mypic;
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-    
-    #header .title h1{
-        font-weight: 400;
-        letter-spacing: 3px;
-        font-size: 3em;
-        padding-top: 0.25em;
-    }
-    
-    #header hr{
-        display: block;
-        width: 80%;
-        height: 1px;
-        border: 0;
-        border-top: 3px solid rgba(128, 0, 128, 0.8);
-        margin: 0.5em 0;
-        padding: 0; 
-    }
-    
-    #header .title h2{
-        font-weight: 300;
-        letter-spacing: 2px;
-        word-spacing: 3px;
-        font-size: 2em;
-        font-style: italic;
-    }
-    
-    body{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0px 350px auto auto auto;
-        text-align: center;
-        grid-template-areas:
-        ". . . menubtn"
-    "header header header header"
-    "intro intro intro intro"
-    "Highlights Highlights Highlights Highlights"
-    "workhis workhis workhis workhis"
-    "AutoProj AutoProj AutoProj AutoProj"
-    "WDSkills WDSkills WDSkills WDSkills"
-    "mywork mywork mywork mywork"
-    "contactme contactme contactme contactme"
-    "footer footer footer footer";
     }
     
     #mywork .art{
