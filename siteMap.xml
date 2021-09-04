@@ -1,20 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<widget xmlns   = "https://samsal81.github.io/MyProfile/"
-    xmlns:gap   = "https://samsal81.github.io/MyProfile/1.0"
-    id          = "html.samsal81.github.io/MyProfile/"
-    versionCode = "10"
-    version     = "1.0.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-<!-- versionCode is optional and Android only -->
-  <name>O.Alsaleh QA Engineer Profile</name>
 
-  <description>
-      discription
-  </description>
+<url>
+  <loc>https://samsal81.github.io/MyProfile/</loc>
+  <lastmod>2021-09-04T20:40:48+00:00</lastmod>
+</url>
 
-  <author href="https://samsal81.github.io/MyProfile/" email="samsal81@outlook.com">
-      Osama Al-Saleh
-  </author>
-  <icon src="Favicon.png" platform="android" />
 
-</widget>
+</urlset>
