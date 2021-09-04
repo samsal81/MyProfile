@@ -142,6 +142,16 @@ body{
     grid-area: Highlights;
 }
 
+#Highlights h3{
+    text-align: left;
+    padding: 1em 0 1.5em 0;
+    margin: auto 20%;
+    letter-spacing: 2px;
+    color: gray;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
 #mywork{
     background-color: hsl(0, 0%, 90%);
     grid-area: mywork;
@@ -174,7 +184,7 @@ body{
 }
 
 li{
-    margin-top: 1em;
+    margin-top: 0.6em;
 }
 
 #jobs{
@@ -239,7 +249,7 @@ li{
 
 .largeText{
     padding: 1em 0 1.5em 0;
-    margin: auto 10%;
+    margin: auto 20%;
     letter-spacing: 2px;
     color: gray;
     text-shadow: 0 0 1px gray;
