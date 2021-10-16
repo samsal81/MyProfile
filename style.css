@@ -152,6 +152,18 @@ body{
     line-height: 1.2em;
 }
 
+#Highlights hr {
+    background-color: purple;
+    width: 40%;
+    height: 3px;
+    text-align: center;
+    margin: 0.7em auto;
+}
+
+#Highlights h3{
+    text-align: center;
+}
+
 #mywork{
     background-color: hsl(0, 0%, 90%);
     grid-area: mywork;
