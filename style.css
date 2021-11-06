@@ -268,21 +268,19 @@ li{
 }
 
 #WDSkills .row{
-    margin-bottom: 1em;
     width: 80%;
+    margin: 0 auto;
+}
+
+#WDSkills .column{
+    width: 80%;
+    margin: 0 auto;
 }
 
 #WDSkills div{
     display: inline-block;
-    margin: 2em 2em;
+    margin: 1em;
     width: 230px;
-}
-
-#WDSkills h2{
-    color: gray;
-    font-weight: 500;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
 }
 
 #WDSkills p{
