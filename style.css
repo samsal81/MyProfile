@@ -423,7 +423,7 @@ li{
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
     
     body{
         display: grid;
@@ -452,58 +452,36 @@ li{
         top: 0em;
         right: 0em;
     }
+
+    #intro h3.largeText {
+        margin: auto 5%;
+    }
+
+    #Highlights h3{
+        margin: auto 5%;
+    }
+
+    #jobs.largeText {
+        margin: auto 5%;
+    }
+
+    #autoprojdesc {
+        margin: auto 5%;
+    }
     
     #header img{
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 10px;
         padding: 10px;
-        width: 150px;
+        width: 40vw;
         background-color: rgba(255, 255, 255, 0.3);
         grid-area: mypic;
         grid-column: 2/3;
         grid-row: 2/3;
     }
     
-    #header .title h1{
-        font-weight: 400;
-        letter-spacing: 3px;
-        font-size: 9vw;
-        padding-top: 0.25em;
-    }
-    
-    #header .title h2{
-        font-weight: 300;
-        letter-spacing: 2px;
-        word-spacing: 3px;
-        font-size: 6vw;
-        font-style: italic;
-    }
-
-    #intro h3{
-        font-size: 1em;
-    }
-
-    #Highlights h3{
-        font-size: 1em;
-    }
-
-    #mywork .row h2{
-        font-weight: 500;
-        font-size: 1em;
-        color: #800080;
-        padding: 1em 0.5em 0.5em 0.5em;
-        text-align: center;
-        word-spacing: 10px;
-        border-bottom: 1px solid purple;
-    }
-    
-    #mywork .row p{
-        font-size: 0.75em;
-        font-weight: 500;
-        color: gray;
-        word-spacing: 4px;
-        padding: 0.5em 0.5em 1em 0.5em;
-        line-height: 1.3em;
+    #header .title {
+        font-size: 70%;
     }
     
     #mywork .vid{
